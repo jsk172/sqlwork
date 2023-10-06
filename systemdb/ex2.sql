@@ -1,10 +1,10 @@
--- í…Œì´ë¸” ìƒì„± (CREATE)
+-- Å×ÀÌºí »ý¼º (CREATE)
 CREATE TABLE ex2 (
-    col_date DATE,      -- ë‚ ì§œ ìžë£Œí˜• (ì‹œìŠ¤í…œì˜ í˜„ìž¬ ë‚ ì§œ)
-    col_timestamp TIMESTAMP    -- ë‚ ì§œì™€ ì‹œê°„ ìžë£Œí˜•
+    col_date DATE,      -- ³¯Â¥ ÀÚ·áÇü (½Ã½ºÅÛÀÇ ÇöÀç ³¯Â¥)
+    col_timestamp TIMESTAMP    -- ³¯Â¥¿Í ½Ã°£ ÀÚ·áÇü
 );
 
--- í˜„ìž¬ ë‚ ì§œ ì‚½ìž…
+-- ÇöÀç ³¯Â¥ »ðÀÔ
 INSERT INTO ex2 VALUES (SYSDATE, SYSTIMESTAMP);
 INSERT INTO ex2(hire_date) VALUES ('2023-09-01');
 
@@ -12,9 +12,9 @@ COMMIT;
 
 SELECT  *  FROM ex2;
 
--- ìƒˆë¡œìš´ ìž…ì‚¬ì¼ ì¹¼ëŸ¼ ì¶”ê°€ = í…Œì´ë¸” ë³€ê²½(ALTER)
+-- »õ·Î¿î ÀÔ»çÀÏ Ä®·³ Ãß°¡ = Å×ÀÌºí º¯°æ(ALTER)
 ALTER TABLE ex2 ADD  hire_date VARCHAR2(20);
 
 
--- í…Œì´ë¸” ì‚­ì œ (DROP)
+-- Å×ÀÌºí »èÁ¦ (DROP)
 DROP TABLE ex2;  

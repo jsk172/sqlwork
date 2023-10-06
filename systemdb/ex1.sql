@@ -1,17 +1,17 @@
--- ìŠ¤í‚¤ë§ˆ:system
--- í…Œì´ë¸” ìƒì„±
+-- ½ºÅ°¸¶:system
+-- Å×ÀÌºí »ý¼º
 CREATE TABLE ex1(
-    column1 CHAR(10),         -- ê³ ì •ê¸¸ì´ ë¬¸ìž (10Byte) 
-    column2 VARCHAR2(10)      -- ê°€ë³€ê¸¸ì´ ë¬¸ìž (10Byte) 
+    column1 CHAR(10),         -- °íÁ¤±æÀÌ ¹®ÀÚ (10Byte) 
+    column2 VARCHAR2(10)      -- °¡º¯±æÀÌ ¹®ÀÚ (10Byte) 
 );
 
 
--- ë°ì´í„° ì¶”ê°€
-INSERT INTO ex1(column1, column2) VALUES ('abc', 'abc');   -- "" ì‚¬ìš©X '' ì‚¬ìš©O
-INSERT INTO ex1 VALUES ('ë‹¹ì‚°', 'ë‹¹ì‚°');            -- ì¹¼ëŸ¼ ëª¨ë‘ì— ë„£ì„ ë•ŒëŠ” ìƒëžµ ê°€ëŠ¥
+-- µ¥ÀÌÅÍ Ãß°¡
+INSERT INTO ex1(column1, column2) VALUES ('abc', 'abc');   -- "" »ç¿ëX '' »ç¿ëO
+INSERT INTO ex1 VALUES ('´ç»ê', '´ç»ê');            -- Ä®·³ ¸ðµÎ¿¡ ³ÖÀ» ¶§´Â »ý·« °¡´É
 
--- ë°ì´í„° ì¡°íšŒ
+-- µ¥ÀÌÅÍ Á¶È¸
 SELECT column1, LENGTH(column1), column2, LENGTH(column2) FROM ex1;
 
--- íŠ¸ëžœìž­ì…˜ : COMMIT, ROLLBACK
+-- Æ®·£Àè¼Ç : COMMIT, ROLLBACK
 COMMIT;

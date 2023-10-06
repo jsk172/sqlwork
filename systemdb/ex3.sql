@@ -1,12 +1,12 @@
--- ex3 í…Œì´ë¸” ìƒì„±
+-- ex3 Å×ÀÌºí »ý¼º
 CREATE TABLE ex3(
-    col_null    VARCHAR2(10),       -- NULL í—ˆìš©
-    col_not_null    VARCHAR2(10) NOT NULL   -- NULL ë¶ˆí—ˆ
+    col_null    VARCHAR2(10),       -- NULL Çã¿ë
+    col_not_null    VARCHAR2(10) NOT NULL   -- NULL ºÒÇã
 );
 
 INSERT INTO ex3 VALUES ('', 'hello');
-INSERT INTO ex3 VALUES ('ì•ˆë…•', 'hello');
-INSERT INTO ex3 VALUES ('ì•ˆë…•', '');           -- null ì—ëŸ¬
+INSERT INTO ex3 VALUES ('¾È³ç', 'hello');
+INSERT INTO ex3 VALUES ('¾È³ç', '');           -- null ¿¡·¯
 
 COMMIT;
 
