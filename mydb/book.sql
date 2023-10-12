@@ -10,7 +10,7 @@ CREATE TABLE book(
 -- 도서 자료 추가
 INSERT INTO book VALUES (1, '축구의 역사', '굿스포츠', 7000);
 INSERT INTO book VALUES (2, '축구아는 여자', '나무수', 13000);
-INSERT INTO book VALUES (3, '축구의 이해', '대한미디어', 12000);
+INSERT INTO book VALUES (3, '축구의 이해', '대한미디어', 23000);
 INSERT INTO book VALUES (4, '골프 바이블', '대한미디어', 35000);
 INSERT INTO book VALUES (5, '피겨 교본', '굿스포츠', 8000);
 INSERT INTO book VALUES (6, '양궁의 실체', '굿스포츠', 6000);
@@ -41,5 +41,10 @@ SELECT * FROM book ORDER BY bookname;
 SELECT * FROM book ORDER BY price;
 -- 도서를 가격순으로 검색하고 가격이 같으면 내림차순으로 정렬
 SELECT * FROM book ORDER BY price ASC, bookname DESC;
+-- 출판사가 '굿스포츠' 또는 '대한미디어' 도서를 검색
+SELECT * FROM book WHERE publisher = '굿스포츠' OR publisher = '대한미디어'; --1
+SELECT * FROM book WHERE publisher IN('굿스포츠', '대한미디어');
+--가격이 13000원이 아닌 도서 검색
+SELECT * FROM book WHERE price <> 13000;
 
 commit;
