@@ -8,7 +8,8 @@ SELECT cus.name, ord.saleprice
 FROM customer cus, orders ord WHERE cus.custid = ord.custid ORDER BY cus.name;
 -- 주문하지 않은 데이터도 모두 검색
 SELECT cus.name, ord.saleprice 
-FROM customer cus, orders ord WHERE cus.custid = ord.custid(+) ORDER BY cus.name;
+FROM customer cus, orders ord WHERE cus.custid = ord.custid(+) --(+)붙일시 외부조인
+ORDER BY cus.name;
 -- 고객의 이름과 주문한 도서 이름,주문일,주문금액
 SELECT cus.name, bk.bookname, ord.orderdate, ord.saleprice
 FROM customer cus, book bk, orders ord 
