@@ -33,6 +33,12 @@ GROUP BY cus.name HAVING cus.name = '김연아' ORDER BY cus.name;
 SELECT cus.name, ord.saleprice
 FROM customer cus INNER JOIN orders ord ON cus.custid = ord.custid
 ORDER BY cus.name;
+
+select * from book;
+select * from customer;
+select * from orders;
+
+
 -- 외부 조인(OUTER JOIN) - JOIN 조건에 충족하는 데이터가 아니여도 출력하는 기법
 -- 고객(customer)과 고객의 주문(orders)에 관한 데이터 중 주문되지 않은 데이터를 포함하여
 -- 고객의 이름과 고객이 주문한 도서의 판매가격을 검색

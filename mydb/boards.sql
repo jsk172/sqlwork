@@ -8,7 +8,7 @@ CREATE TABLE boards(
     bfilename VARCHAR2(50),
     bfiledata BLOB --(Binary Large Of Byte)
 );
--- 시퀀스 생성
+-- 시퀀스 생성(NOCACHE - 저장하지않음, 초기화되면 1부터 시작됨)
 CREATE SEQUENCE seq_bno NOCACHE;
 
 -- 게시글 추가
@@ -24,6 +24,13 @@ SELECT * FROM boards
 WHERE bwriter = 'sky123'
 ORDER BY bno DESC;
 
+SELECT * FROM boards
+ORDER BY bno DESC;
+
+--smartphone -> iphone
+UPDATE boards SET btitle = 'Iphone' WHERE bno =6;
+DELETE FROM boards WHERE btitle = 'notebook3';
+rollback;
 
 commit;
 

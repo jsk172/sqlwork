@@ -47,5 +47,10 @@ ROUND(salary/30, 0) 일급
 FROM emp;
 
 SELECT * FROM emp;
+
+-- 급여가 가장 많은 사원을 검색
+SELECT ename,salary FROM emp 
+WHERE SALARY = (SELECT MAX(salary) FROM emp) OR SALARY = (SELECT MIN(salary) from emp);
+
 rollback;
 commit;
