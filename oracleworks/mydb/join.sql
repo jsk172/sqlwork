@@ -25,7 +25,7 @@ FROM customer cus, orders ord WHERE cus.custid = ord.custid AND cus.name = '박지
 -- 김연아 고객의 주문금액의 총액을 출력(HAVING으로 제한을 둠)
 SELECT cus.name, SUM(ord.saleprice) 
 FROM customer cus, orders ord WHERE cus.custid = ord.custid 
-GROUP BY cus.name HAVING cus.name = '김연아' ORDER BY cus.name;
+GROUP BY cus.name HAVING cus.name = '신유빈' ORDER BY cus.name;
 
 -- 표준 조인(ANSI SQL)
 -- 내부 조인(INNER JOIN)

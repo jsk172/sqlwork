@@ -59,3 +59,5 @@ SELECT a.drink_name,
        b.order_cnt
 FROM drink a LEFT JOIN cafe_order b
   ON a.drink_code = b.drink_code;
+  
+commit;
